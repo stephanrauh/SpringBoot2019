@@ -1,4 +1,4 @@
-package de.beyondjava.travel.expenses.de.beyondjava.trave.persistence;
+package de.beyondjava.travel.expenses.persistence;
 
 
 import javax.persistence.Entity;
