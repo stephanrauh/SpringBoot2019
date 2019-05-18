@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ExpensesApplication",
+            "request": "launch",
+            "mainClass": "de.beyondjava.travel.ExpensesApplication",
+            "projectName": "expenses"
+        }
+    ]
+}
