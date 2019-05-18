@@ -1,0 +1,10 @@
+<table>
+  <tr>
+    <td><b>Hotel</b></td>
+    <td><b>wasted money</b></td>
+  </tr>
+  <tr *ngFor="let exp of expenses$ | async">
+    <td>{{ exp.hotel }}</td>
+    <td>{{ exp.amount | currency: 'EUR' }}</td>
+  </tr>
+</table>
