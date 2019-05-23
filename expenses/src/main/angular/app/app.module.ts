@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 import { ExpensesComponent } from './expenses/expenses.component';
 import { ExpensesService } from './expenses.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AusgabeComponent } from './ausgabe/ausgabe.component';
+import { EingabeComponent } from './eingabe/eingabe.component';
+import {FormsModule} from '@angular/forms';
+
 
 @NgModule({
-  declarations: [AppComponent, ExpensesComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [AppComponent, ExpensesComponent, AusgabeComponent, EingabeComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [ExpensesService],
   bootstrap: [AppComponent]
 })

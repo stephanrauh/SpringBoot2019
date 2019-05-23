@@ -6,5 +6,7 @@
   <tr *ngFor="let exp of expenses$ | async">
     <td>{{ exp.hotel }}</td>
     <td>{{ exp.amount | currency: 'EUR' }}</td>
+    <td><button (click)="onEdit(exp)">Edit</button></td>
   </tr>
 </table>
+
