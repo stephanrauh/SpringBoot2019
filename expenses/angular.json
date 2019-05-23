@@ -19,10 +19,21 @@
             "polyfills": "src/main/angular/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              { "glob": "favicon.ico", "input": "src/main/angular", "output": "/" },
-              { "glob": "**/*", "input": "src/main/angular/assets", "output": "/assets" }
+              {
+                "glob": "favicon.ico",
+                "input": "src/main/angular",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/main/angular/assets",
+                "output": "/assets"
+              }
             ],
-            "styles": ["src/main/angular/styles.css"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "src/main/angular/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -76,16 +87,28 @@
             "polyfills": "src/main/angular/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": ["src/main/angular/favicon.ico", "src/main/angular/assets"],
-            "styles": ["src/main/angular/styles.css"],
+            "assets": [
+              "src/main/angular/favicon.ico",
+              "src/main/angular/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "src/main/angular/styles.css"
+            ],
             "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json", "e2e/tsconfig.json"],
-            "exclude": ["**/node_modules/**"]
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         },
         "e2e": {

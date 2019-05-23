@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ExpensesService } from '../expenses.service';
 import { Observable } from 'rxjs';
 import {Expense} from './expense';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-expenses',
@@ -9,7 +10,7 @@ import {Expense} from './expense';
   styleUrls: ['./expenses.component.css']
 })
 export class ExpensesComponent implements OnInit {
-  constructor(private expensesService: ExpensesService) {}
+  constructor(private expensesService: ExpensesService, private router: Router) {}
 
   public expenses$: Observable<Array<Expense>>;
 
@@ -20,5 +21,6 @@ export class ExpensesComponent implements OnInit {
 
   onEdit(expense: Expense) {
     this.expensesService.editItem(expense);
+    this.router.navigate(['/eingabe']);
   }
 }
