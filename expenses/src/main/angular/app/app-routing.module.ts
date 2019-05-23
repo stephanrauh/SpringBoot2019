@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {EingabeComponent} from './eingabe/eingabe.component';
 import {ExpensesComponent} from './expenses/expenses.component';
+import {FormstyleComponent} from './formstyle/formstyle.component';
 
 const routes: Routes = [
   { path: 'eingabe', component: EingabeComponent},
-  { path: 'expenses', component: ExpensesComponent}
+  { path: 'expenses', component: ExpensesComponent},
+  { path: 'formstyle', component: FormstyleComponent}
   ];
 
 @NgModule({

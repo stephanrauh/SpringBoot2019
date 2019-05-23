@@ -8,13 +8,20 @@ import { ExpensesService } from './expenses.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AusgabeComponent } from './ausgabe/ausgabe.component';
 import { EingabeComponent } from './eingabe/eingabe.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavigationComponent } from './navigation/navigation.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule,
+  MatInputModule, MatSelectModule, MatRadioModule, MatCardModule } from '@angular/material';
+import { FormstyleComponent } from './formstyle/formstyle.component';
 
 
 @NgModule({
-  declarations: [AppComponent, ExpensesComponent, AusgabeComponent, EingabeComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule],
+  declarations: [AppComponent, ExpensesComponent, AusgabeComponent, EingabeComponent, NavigationComponent, FormstyleComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule,
+    LayoutModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule,
+    MatInputModule, MatSelectModule, MatRadioModule, MatCardModule, ReactiveFormsModule],
   providers: [ExpensesService],
   bootstrap: [AppComponent]
 })
