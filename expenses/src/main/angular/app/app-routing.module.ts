@@ -7,7 +7,8 @@ import {FormstyleComponent} from './formstyle/formstyle.component';
 const routes: Routes = [
   { path: 'eingabe', component: EingabeComponent},
   { path: 'expenses', component: ExpensesComponent},
-  { path: 'formstyle', component: FormstyleComponent}
+  { path: 'formstyle', component: FormstyleComponent},
+  { path: '', redirectTo: '/expenses', pathMatch: 'full'}
   ];
 
 @NgModule({
