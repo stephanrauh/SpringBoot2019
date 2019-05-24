@@ -1,12 +1,20 @@
-<table>
-  <tr>
-    <td><b>Hotel</b></td>
-    <td><b>wasted money</b></td>
-  </tr>
-  <tr *ngFor="let exp of expenses$ | async">
-    <td>{{ exp.hotel }}</td>
-    <td>{{ exp.amount | currency: 'EUR' }}</td>
-    <td><button (click)="onEdit(exp)">Edit</button></td>
-  </tr>
-</table>
+<div class="container">
+  <mat-card class="shipping-card">
+    <table class="table table-condensed">
+      <thead>
+      <tr>
+        <td><h4><b>Hotel</b></h4></td>
+        <td><h4><b>Wasted Money</b></h4></td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let exp of expenses$ | async">
+        <td>{{ exp.hotel }}</td>
+        <td>{{ exp.amount | currency: 'EUR' }}</td>
+        <td><button (click)="onEdit(exp)">Edit</button></td>
+      </tr>
+      </tbody>
+    </table>
+  </mat-card>
+</div>
 

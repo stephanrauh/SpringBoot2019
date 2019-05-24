@@ -13,15 +13,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule,
-  MatInputModule, MatSelectModule, MatRadioModule, MatCardModule } from '@angular/material';
+  MatInputModule, MatSelectModule, MatRadioModule, MatCardModule,
+  MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { FormstyleComponent } from './formstyle/formstyle.component';
+import { TablestyleComponent } from './tablestyle/tablestyle.component';
 
 
 @NgModule({
-  declarations: [AppComponent, ExpensesComponent, AusgabeComponent, EingabeComponent, NavigationComponent, FormstyleComponent],
+  declarations: [AppComponent, ExpensesComponent, AusgabeComponent, EingabeComponent,
+    NavigationComponent, FormstyleComponent, TablestyleComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule,
     LayoutModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule,
-    MatInputModule, MatSelectModule, MatRadioModule, MatCardModule, ReactiveFormsModule],
+    MatInputModule, MatSelectModule, MatRadioModule, MatCardModule, ReactiveFormsModule, MatTableModule, MatPaginatorModule, MatSortModule],
   providers: [ExpensesService],
   bootstrap: [AppComponent]
 })
