@@ -1,0 +1,70 @@
+<!--<div>-->
+<!--  <label>Id:-->
+<!--    <input [(ngModel)]="expense.id" placeholder="id" />-->
+<!--  </label>-->
+<!--</div>-->
+<!--<br />-->
+<!--<div>-->
+<!--  <label>Hotel:-->
+<!--    <input [(ngModel)]="expense.hotel" placeholder="hotel" />-->
+<!--</label>-->
+<!--</div>-->
+<!--<br />-->
+<!--<div>-->
+<!--  <label>Amount:-->
+<!--    <input [(ngModel)]="expense.amount" placeholder="amount" />-->
+<!--  </label>-->
+<!--</div>-->
+<!--<br>-->
+<!--<div>-->
+<!--  <button (click)="save()">Speichern</button>-->
+<!--  <button (click)="cancel()">Abbrechen</button>-->
+<!--</div>-->
+
+<!--<hr>-->
+<div class="container">
+  <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+    <mat-card class="shipping-card">
+      <mat-card-header>
+        <mat-card-title>{{'Enter_an_Expense_please' | translate}} !</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content class="container">
+        <div class="row"  *ngIf="hide">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Id" formControlName="id" >
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Hotel Name" formControlName="hotel">
+              <mat-error *ngIf="addressForm.controls['hotel'].hasError('required')">
+                The hotel name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Amount" formControlName="amount" >
+              <mat-error *ngIf="addressForm.controls['amount'].hasError('required')">
+                the amount is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <!--      <button mat-raised-button color="primary" type="submit">Submit</button>-->
+<!--        <button mat-raised-button color="primary" type="submit" [disabled]="!canBeSaved">Speichern</button>-->
+        <button mat-raised-button color="primary" type="submit">Speichern</button>
+        <button mat-raised-button color="secondary" (click)="cancel()" >Abbrechen</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>
+
+
