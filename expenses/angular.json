@@ -38,6 +38,13 @@
             "scripts": []
           },
           "configurations": {
+            "fr": {
+              "aot": true,
+              "outputPath": "dist/my-project-fr/",
+              "i18nFile": "src/locale/messages.fr.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "fr"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -67,7 +74,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "spring-boot2019:build"
+            "browserTarget": "spring-boot2019:build:fr"
           },
           "configurations": {
             "production": {

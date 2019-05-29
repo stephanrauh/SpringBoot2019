@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+import localeFrExtra from '@angular/common/locales/extra/fr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +28,10 @@ export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
+
+// the second parameter 'fr' is optional
+registerLocaleData(localeFr, 'fr-FR', localeFrExtra);
+
 @NgModule({
   declarations: [AppComponent, ExpensesComponent, AusgabeComponent, EingabeComponent,
     NavigationComponent, FormstyleComponent, TablestyleComponent],
@@ -44,7 +51,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 })
 export class AppModule {
 
-  constructor(translate: TranslateService){
+
+  constructor(translate: TranslateService) {
     // this language will be used as a fallback when a translation isn't found in the current language
     translate.setDefaultLang('de');
     translate.getBrowserLang();
